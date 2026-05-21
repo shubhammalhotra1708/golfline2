@@ -80,7 +80,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
-          <p>&copy; 2025 Golfline. All rights reserved.</p>
+          <p>&copy; 2026 Golfline. All rights reserved.</p>
           <p className="italic">Designed to last longer than trends.</p>
         </div>
       </div>

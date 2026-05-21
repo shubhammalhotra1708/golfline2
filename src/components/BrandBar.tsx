@@ -6,12 +6,12 @@ const brands = [
   { name: "Superkicks", src: "/images/brands/superkicks.png" },
   { name: "BLCKORCHID", src: "/images/brands/blckorchid.png" },
   { name: "Freeze Studios", src: "/images/brands/freeze-studios.png" },
-  { name: "Calcutta", src: "/images/brands/calcutta.webp" },
+  { name: "KNN Calcutta", src: "/images/brands/calcutta.webp" },
   { name: "CRAY", src: "/images/brands/cray.webp" },
-  { name: "galli", src: "/images/brands/galli.webp" },
+  { name: "Galli", src: "/images/brands/galli.webp" },
   { name: "EVEMEN", src: "/images/brands/evemen.png" },
-  { name: "Black Farak", src: "/images/brands/black-farak.avif" },
-  { name: "FB", src: "/images/brands/fb-monogram.png" },
+  { name: "Farak", src: "/images/brands/black-farak.avif" },
+  { name: "Code Brown", src: "/images/brands/code-brown.png" },
 ];
 
 export default function BrandBar() {
