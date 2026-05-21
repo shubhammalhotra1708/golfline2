@@ -34,15 +34,21 @@ export default function BrandBar() {
           {doubled.map((brand, i) => (
             <div
               key={i}
-              className="mx-8 lg:mx-12 shrink-0 h-8 w-24 lg:h-10 lg:w-32 relative opacity-70 hover:opacity-100 transition-opacity duration-300"
+              className="group mx-8 lg:mx-12 shrink-0 flex flex-col items-center gap-2"
+              title={brand.name}
             >
-              <Image
-                src={brand.src}
-                alt={brand.name}
-                fill
-                className="object-contain"
-                sizes="128px"
-              />
+              <div className="h-8 w-24 lg:h-10 lg:w-32 relative opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                <Image
+                  src={brand.src}
+                  alt={brand.name}
+                  fill
+                  className="object-contain"
+                  sizes="128px"
+                />
+              </div>
+              <span className="text-[10px] tracking-[0.15em] uppercase text-muted/0 group-hover:text-muted transition-colors duration-300">
+                {brand.name}
+              </span>
             </div>
           ))}
         </div>

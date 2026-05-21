@@ -110,14 +110,14 @@ export default function ProcessPage() {
       </section>
 
       {/* What We Work With — pointer style */}
-      <section className="py-20 lg:py-28 bg-surface">
+      <section className="py-20 lg:py-28 bg-accent text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <RevealOnScroll>
             <div className="max-w-xl">
-              <p className="text-xs tracking-[0.2em] uppercase text-muted mb-4">
+              <p className="text-xs tracking-[0.2em] uppercase text-white/50 mb-4">
                 What We Work With
               </p>
-              <h2 className="font-serif text-3xl lg:text-4xl leading-tight">
+              <h2 className="font-serif text-3xl lg:text-4xl leading-tight text-white">
                 Premium yarn & fibre expertise.
               </h2>
             </div>
@@ -127,8 +127,8 @@ export default function ProcessPage() {
             {yarns.map((yarn, i) => (
               <RevealOnScroll key={i} delay={i * 60}>
                 <div className="flex items-center gap-3 py-2">
-                  <span className="w-1.5 h-1.5 bg-foreground shrink-0" />
-                  <span className="text-sm tracking-wide">{yarn}</span>
+                  <span className="w-1.5 h-1.5 bg-white shrink-0" />
+                  <span className="text-sm tracking-wide text-white/80">{yarn}</span>
                 </div>
               </RevealOnScroll>
             ))}

@@ -15,6 +15,8 @@ function Hero() {
         className="object-cover"
         priority
         sizes="100vw"
+        placeholder="blur"
+        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUH/8QAIhAAAQMDBAMBAAAAAAAAAAAAAQIDBAAFEQYSITETQVFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/AE9s1Bpxlhq5wYrr84IC3UOpCW0eySfZNS7prO+3R1TjdwlMJP1p5SUj+ClVRLf/9k="
       />
       <div className="absolute inset-0 bg-accent/85" />
       <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8 pt-20 lg:max-w-[85%] lg:mr-auto lg:ml-[8%]">
