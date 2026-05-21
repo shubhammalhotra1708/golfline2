@@ -1,53 +1,29 @@
 import Link from "next/link";
+import Image from "next/image";
 import RevealOnScroll from "@/components/RevealOnScroll";
-
-/* ─── Brand Bar ─── */
-function BrandBar() {
-  const brands = [
-    "BRAND A",
-    "BRAND B",
-    "BRAND C",
-    "BRAND D",
-    "BRAND E",
-    "BRAND F",
-    "BRAND G",
-    "BRAND H",
-  ];
-
-  return (
-    <section className="py-10 border-b border-border bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-center text-xs tracking-[0.2em] uppercase text-muted mb-8">
-          Trusted by leading brands across India and international markets
-        </p>
-      </div>
-      <div className="overflow-hidden">
-        <div className="flex animate-scroll w-max">
-          {[...brands, ...brands].map((brand, i) => (
-            <span
-              key={i}
-              className="mx-8 lg:mx-12 text-sm tracking-[0.2em] text-muted/50 font-medium whitespace-nowrap select-none"
-            >
-              {brand}
-            </span>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+import BrandBar from "@/components/BrandBar";
+import ExpertiseAccordion from "@/components/ExpertiseAccordion";
 
 /* ─── Hero ─── */
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-surface">
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center pt-20">
-        <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl leading-[1.1] tracking-tight animate-fade-in-up">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      <Image
+        src="/images/hero/yarn-spools.jpeg"
+        alt=""
+        fill
+        className="object-cover"
+        priority
+        sizes="100vw"
+      />
+      <div className="absolute inset-0 bg-accent/85" />
+      <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8 pt-20 lg:max-w-[85%] lg:mr-auto lg:ml-[8%]">
+        <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl leading-[1.1] tracking-tight text-white animate-fade-in-up">
           STITCHING DREAMS,
           <br />
           ONE KNIT AT A TIME
         </h1>
-        <p className="mt-8 text-muted text-base sm:text-lg leading-relaxed max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
+        <p className="mt-8 text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl animate-fade-in-up animation-delay-200">
           With 35+ years of expertise, Golfline is your full-cycle partner for
           premium flat-knit manufacturing. We transform your design vision into
           market-ready reality with precision, consistency, and speed.
@@ -55,10 +31,32 @@ function Hero() {
         <div className="mt-10 animate-fade-in-up animation-delay-400">
           <Link
             href="/about"
-            className="inline-block border border-foreground px-8 py-3.5 text-sm tracking-[0.15em] uppercase hover:bg-foreground hover:text-white transition-all duration-300"
+            className="inline-block border border-white text-white px-8 py-3.5 text-sm tracking-[0.15em] uppercase hover:bg-white hover:text-accent transition-all duration-300"
           >
             View More
           </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── Expertise (accordion) ─── */
+function Expertise() {
+  return (
+    <section className="py-20 lg:py-28 bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+          <div className="lg:col-span-2">
+            <RevealOnScroll>
+              <h2 className="font-serif text-3xl lg:text-4xl leading-tight">
+                Our expertise inspires creative solutions.
+              </h2>
+            </RevealOnScroll>
+          </div>
+          <div className="lg:col-span-3">
+            <ExpertiseAccordion />
+          </div>
         </div>
       </div>
     </section>
@@ -69,15 +67,14 @@ function Hero() {
 function TrustMetrics() {
   const metrics = [
     { value: "35+", label: "Years of Expertise" },
-    { value: "<48", label: "Hours Quote Response Time" },
     { value: "100%", label: "In-line Quality Control" },
     { value: "5", label: "Full-cycle Production Phases" },
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-20 lg:py-28 bg-surface">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-3 gap-8 lg:gap-12">
           {metrics.map((m, i) => (
             <RevealOnScroll key={i} delay={i * 100}>
               <div className="text-center">
@@ -99,127 +96,109 @@ function TrustMetrics() {
 /* ─── Process / How We Work ─── */
 function Process() {
   const steps = [
-    {
-      num: "01",
-      title: "Enquiry & Brief",
-      desc: "Share your concept, reference, or tech pack. We respond with feasibility and costing within 48 hours.",
-    },
-    {
-      num: "02",
-      title: "Sample Development",
-      desc: "Development and revision rounds continue until you are fully satisfied with fit, construction, and finish.",
-    },
-    {
-      num: "03",
-      title: "Order Confirmation",
-      desc: "Quantities, timelines, and pricing are locked before production begins.",
-    },
-    {
-      num: "04",
-      title: "Production & Quality Control",
-      desc: "In-line quality checks at every stage with regular progress updates.",
-    },
-    {
-      num: "05",
-      title: "Packing & Dispatch",
-      desc: "Fully inspected, packed to specification, and delivered on schedule.",
-    },
+    { num: "01", title: "Enquiry & Brief" },
+    { num: "02", title: "Sample Development" },
+    { num: "03", title: "Order Confirmation" },
+    { num: "04", title: "Production & Quality Control" },
+    { num: "05", title: "Packing & Dispatch" },
+  ];
+
+  return (
+    <section className="py-20 lg:py-28 bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <RevealOnScroll>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src="/images/products/yarn-neutral.jpeg"
+                alt="Premium yarn spools"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+              />
+            </div>
+          </RevealOnScroll>
+
+          {/* Steps — headers only */}
+          <div>
+            <RevealOnScroll>
+              <h2 className="font-serif text-3xl lg:text-4xl leading-tight mb-12">
+                A clear, structured production journey.
+              </h2>
+            </RevealOnScroll>
+
+            <div className="space-y-0">
+              {steps.map((step, i) => (
+                <RevealOnScroll key={i} delay={i * 80}>
+                  <div className="flex items-baseline gap-4 py-4 border-b border-border">
+                    <span className="font-serif text-lg text-muted/30">
+                      {step.num}
+                    </span>
+                    <h3 className="text-base font-medium tracking-wide">
+                      {step.title}
+                    </h3>
+                  </div>
+                </RevealOnScroll>
+              ))}
+            </div>
+
+            <RevealOnScroll className="mt-10">
+              <Link
+                href="/process"
+                className="inline-block border border-foreground px-8 py-3.5 text-sm tracking-[0.15em] uppercase hover:bg-foreground hover:text-white transition-all duration-300"
+              >
+                View More
+              </Link>
+            </RevealOnScroll>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── Product Range ─── */
+function ProductRange() {
+  const categories = [
+    { name: "Flat Knit Collar", image: "/images/products/yarn-knit-bw.jpeg" },
+    { name: "Sweaters & Pullovers", image: "/images/products/yarn-pink-green.jpeg" },
+    { name: "Jacquard Knits", image: "/images/products/sewing-machine.jpeg" },
+    { name: "Rib Knits", image: "/images/products/yarn-neutral.jpeg" },
+    { name: "Cotton Knits", image: null },
+    { name: "Cable Knits", image: null },
   ];
 
   return (
     <section className="py-20 lg:py-28 bg-surface">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <RevealOnScroll>
-          <div className="max-w-xl">
-            <p className="text-xs tracking-[0.2em] uppercase text-muted mb-4">
-              Process
-            </p>
-            <h2 className="font-serif text-3xl lg:text-4xl leading-tight">
-              A clear, structured production journey.
-            </h2>
-          </div>
+          <h2 className="font-serif text-3xl lg:text-4xl leading-tight mb-14">
+            Our Range
+          </h2>
         </RevealOnScroll>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12">
-          {steps.map((step, i) => (
-            <RevealOnScroll key={i} delay={i * 100}>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 lg:gap-6">
+          {categories.map((cat, i) => (
+            <RevealOnScroll key={i} delay={i * 80}>
               <div className="group">
-                <span className="text-xs tracking-[0.2em] text-muted">
-                  Step {step.num}
-                </span>
-                <h3 className="mt-2 text-lg font-medium tracking-wide">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-sm text-muted leading-relaxed">
-                  {step.desc}
-                </p>
-              </div>
-            </RevealOnScroll>
-          ))}
-        </div>
-
-        <RevealOnScroll className="mt-14">
-          <Link
-            href="/process"
-            className="inline-block border border-foreground px-8 py-3.5 text-sm tracking-[0.15em] uppercase hover:bg-foreground hover:text-white transition-all duration-300"
-          >
-            View More
-          </Link>
-        </RevealOnScroll>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Why Golfline ─── */
-function WhyGolfline() {
-  const reasons = [
-    {
-      title: "35+ Years of Expertise",
-      desc: "Trusted by brands across domestic and international markets, season after season.",
-    },
-    {
-      title: "Uncompromising Quality",
-      desc: "What leaves our facility matches exactly what was approved at sampling. No exceptions.",
-    },
-    {
-      title: "Fast Turnaround",
-      desc: "Fully in-house manufacturing enables quick movement from sampling to shipment.",
-    },
-    {
-      title: "Cutting-edge Technology",
-      desc: "State-of-the-art flat-knit machinery combining industrial precision with artisanal craftsmanship.",
-    },
-    {
-      title: "No Subcontracting",
-      desc: "One team. One accountability chain. Complete ownership from enquiry to final delivery.",
-    },
-  ];
-
-  return (
-    <section className="py-20 lg:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <RevealOnScroll>
-          <div className="max-w-xl">
-            <p className="text-xs tracking-[0.2em] uppercase text-muted mb-4">
-              Why Golfline
-            </p>
-            <h2 className="font-serif text-3xl lg:text-4xl leading-tight">
-              Built on trust. Delivered with precision.
-            </h2>
-          </div>
-        </RevealOnScroll>
-
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
-          {reasons.map((r, i) => (
-            <RevealOnScroll key={i} delay={i * 100}>
-              <div className="border-t border-border pt-6">
-                <h3 className="text-base font-medium tracking-wide">
-                  {r.title}
-                </h3>
-                <p className="mt-3 text-sm text-muted leading-relaxed">
-                  {r.desc}
-                </p>
+                <div className="relative aspect-[4/3] overflow-hidden border border-border bg-border/30 mb-3">
+                  {cat.image ? (
+                    <Image
+                      src={cat.image}
+                      alt={cat.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(min-width: 640px) 33vw, 50vw"
+                    />
+                  ) : (
+                    <div className="flex items-center justify-center h-full">
+                      <p className="text-xs text-muted/50 tracking-wide">
+                        Photo
+                      </p>
+                    </div>
+                  )}
+                </div>
+                <p className="text-sm font-medium tracking-wide">{cat.name}</p>
               </div>
             </RevealOnScroll>
           ))}
@@ -232,7 +211,7 @@ function WhyGolfline() {
 /* ─── Differentiator ─── */
 function Differentiator() {
   return (
-    <section className="py-20 lg:py-28 bg-foreground text-white">
+    <section className="py-20 lg:py-28 bg-accent text-white">
       <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
         <RevealOnScroll>
           <h2 className="font-serif text-3xl lg:text-5xl leading-tight">
@@ -252,7 +231,7 @@ function Differentiator() {
 /* ─── Contact (Homepage) ─── */
 function ContactSection() {
   return (
-    <section className="py-20 lg:py-28 bg-surface">
+    <section className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <RevealOnScroll>
           <p className="text-xs tracking-[0.2em] uppercase text-muted mb-4">
@@ -279,10 +258,10 @@ function ContactSection() {
                 Email
               </h4>
               <a
-                href="mailto:enquiries@golfline.com"
+                href="mailto:team@golfline.in"
                 className="text-base hover:underline underline-offset-4 transition-colors"
               >
-                enquiries@golfline.com
+                team@golfline.in
               </a>
             </div>
           </RevealOnScroll>
@@ -292,7 +271,12 @@ function ContactSection() {
               <h4 className="text-xs tracking-[0.2em] uppercase text-muted mb-3">
                 Phone
               </h4>
-              <p className="text-base">+91 (161) XXX-XXXX</p>
+              <a
+                href="tel:+919872858280"
+                className="text-base hover:underline underline-offset-4 transition-colors"
+              >
+                9872858280
+              </a>
             </div>
           </RevealOnScroll>
         </div>
@@ -307,9 +291,10 @@ export default function Home() {
     <>
       <Hero />
       <BrandBar />
+      <Expertise />
       <TrustMetrics />
       <Process />
-      <WhyGolfline />
+      <ProductRange />
       <Differentiator />
       <ContactSection />
     </>

@@ -17,24 +17,13 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://golfline.in"),
   title: {
     default: "GOLFLINE | Premium Flat-Knit Knitwear Manufacturing",
     template: "%s | GOLFLINE",
   },
   description:
     "With 35+ years of expertise, Golfline is your full-cycle partner for premium flat-knit manufacturing. We transform your design vision into market-ready reality with precision, consistency, and speed.",
-  keywords: [
-    "knitwear manufacturer",
-    "flat knit manufacturing",
-    "sweater manufacturer India",
-    "premium knitwear",
-    "private label knitwear",
-    "Ludhiana knitwear",
-    "wool sweater manufacturer",
-    "cashmere manufacturer",
-    "knitwear production",
-    "garment manufacturing India",
-  ],
   authors: [{ name: "Golfline" }],
   openGraph: {
     type: "website",
@@ -48,6 +37,39 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: "/",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Golfline",
+  url: "https://golfline.in",
+  description:
+    "Premium flat-knit knitwear manufacturer with 35+ years of expertise. Full-cycle manufacturing from sampling to dispatch.",
+  foundingDate: "1990",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Ludhiana",
+    addressRegion: "Punjab",
+    addressCountry: "IN",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+91-9872858280",
+    email: "team@golfline.in",
+    contactType: "sales",
+    availableLanguage: ["English", "Hindi"],
+  },
+  knowsAbout: [
+    "Flat-knit knitwear manufacturing",
+    "Cashmere knitwear",
+    "Merino wool sweaters",
+    "Private label knitwear",
+    "Sweater manufacturing",
+  ],
 };
 
 export default function RootLayout({
@@ -61,6 +83,10 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col bg-background text-foreground">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

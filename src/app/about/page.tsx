@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import BrandBar from "@/components/BrandBar";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -8,17 +9,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Us | GOLFLINE",
     description:
-      "Two decades of knitwear excellence. Vertically integrated manufacturing with 35+ years of expertise.",
+      "35+ years of knitwear excellence. Vertically integrated manufacturing from Ludhiana, Punjab.",
+  },
+  alternates: {
+    canonical: "/about",
   },
 };
 
 export default function AboutPage() {
-  const highlights = [
-    { value: "25+", label: "Years in Manufacturing" },
-    { value: "4", label: "Yarn Specialisations" },
-    { value: "100%", label: "In-House Production" },
-  ];
-
   return (
     <>
       {/* Hero */}
@@ -28,7 +26,7 @@ export default function AboutPage() {
             About Us
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight animate-fade-in-up animation-delay-100">
-            Two Decades of Knitwear Excellence
+            35+ Years of Knitwear Excellence
           </h1>
         </div>
       </section>
@@ -56,33 +54,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Key Highlights */}
-      <section className="py-20 lg:py-28 bg-surface">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <RevealOnScroll>
-            <p className="text-xs tracking-[0.2em] uppercase text-muted mb-12 text-center">
-              Key Highlights
-            </p>
-          </RevealOnScroll>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12">
-            {highlights.map((h, i) => (
-              <RevealOnScroll key={i} delay={i * 100}>
-                <div className="text-center">
-                  <span className="font-serif text-4xl lg:text-5xl tracking-tight">
-                    {h.value}
-                  </span>
-                  <p className="mt-3 text-sm text-muted tracking-wide">
-                    {h.label}
-                  </p>
-                </div>
-              </RevealOnScroll>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Vision & Mission */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-20 lg:py-28 bg-surface">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <RevealOnScroll>
@@ -124,7 +97,7 @@ export default function AboutPage() {
       </section>
 
       {/* Founder's Message */}
-      <section className="py-20 lg:py-28 bg-foreground text-white">
+      <section className="py-20 lg:py-28 bg-accent text-white">
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <RevealOnScroll>
             <p className="text-xs tracking-[0.2em] uppercase text-white/50 mb-8">
@@ -134,12 +107,15 @@ export default function AboutPage() {
               &ldquo;I understand the frustrations of inconsistent quality and
               delayed timelines that plague the fashion industry. At Golfline, we
               have built a team and a process specifically designed to eliminate
-              these risks at the root. We don&apos;t just execute.. we partner in
+              these risks at the root. We don&apos;t just execute — we partner in
               your success.&rdquo;
             </blockquote>
           </RevealOnScroll>
         </div>
       </section>
+
+      {/* Brand Bar */}
+      <BrandBar />
     </>
   );
 }

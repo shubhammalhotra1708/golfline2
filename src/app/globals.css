@@ -6,6 +6,7 @@
   --color-muted: #666666;
   --color-border: #e5e5e5;
   --color-surface: #f7f7f5;
+  --color-accent: #1a237e;
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
 }
@@ -67,4 +68,39 @@ html {
 
 .animate-scroll:hover {
   animation-play-state: paused;
+}
+
+/* Process mobile timeline */
+.flow-mobile-spine {
+  position: relative;
+  padding-left: 32px;
+}
+
+.flow-mobile-spine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 4px;
+  width: 1px;
+  background: var(--color-border);
+}
+
+.flow-mobile-dot {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  background: var(--color-foreground);
+  border-radius: 50%;
+}
+
+@media (scripting: none) {
+  .reveal,
+  .animate-fade-in-up {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
 }

@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Ready to start your next collection? Share your concept or tech pack with Golfline. Average response time under 48 hours.",
+    "Ready to start your next collection? Share your concept or tech pack with Golfline.",
   openGraph: {
     title: "Contact | GOLFLINE",
     description:
-      "Share your concept or tech pack with our development team. Average response time under 48 hours.",
+      "Share your concept or tech pack with our development team.",
+  },
+  alternates: {
+    canonical: "/contact",
   },
 };
 
@@ -16,20 +20,29 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-surface">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <p className="text-xs tracking-[0.2em] uppercase text-muted mb-4 animate-fade-in-up">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <Image
+          src="/images/products/yarn-knit-bw.jpeg"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-accent/90" />
+        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
+          <p className="text-xs tracking-[0.2em] uppercase text-white/50 mb-4 animate-fade-in-up">
             Contact
           </p>
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight animate-fade-in-up animation-delay-100">
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-white animate-fade-in-up animation-delay-100">
             Ready to Start Your Next Collection?
           </h1>
-          <p className="mt-8 text-muted text-base sm:text-lg leading-relaxed max-w-2xl animate-fade-in-up animation-delay-200">
+          <p className="mt-8 text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl animate-fade-in-up animation-delay-200">
             Share your concept or tech pack with our development team.
             We&apos;ll respond with a formal feasibility study and costing -
             fast.
           </p>
-          <p className="mt-4 text-muted text-base sm:text-lg leading-relaxed max-w-2xl animate-fade-in-up animation-delay-300">
+          <p className="mt-4 text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl animate-fade-in-up animation-delay-300">
             Whether you&apos;re a growing D2C brand seeking your first
             manufacturing partner or an established label looking for a more
             reliable alternative - we&apos;re ready to talk.
@@ -78,20 +91,6 @@ export default function ContactPage() {
               </div>
             </RevealOnScroll>
           </div>
-        </div>
-      </section>
-
-      {/* Response Time Banner */}
-      <section className="py-16 lg:py-20 bg-foreground text-white">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <RevealOnScroll>
-            <p className="text-xs tracking-[0.3em] uppercase text-white/50 mb-4">
-              Average Response
-            </p>
-            <p className="font-serif text-3xl lg:text-5xl tracking-tight">
-              &lt; 48 Hours
-            </p>
-          </RevealOnScroll>
         </div>
       </section>
     </>

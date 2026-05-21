@@ -45,7 +45,7 @@ export default function Header() {
               href="/process"
               className="text-muted hover:text-foreground transition-colors duration-200"
             >
-              Process / How We Work
+              What We Do
             </Link>
           </li>
           <li>
@@ -104,7 +104,7 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
               className="text-muted hover:text-foreground transition-colors"
             >
-              Process / How We Work
+              What We Do
             </Link>
           </li>
           <li>

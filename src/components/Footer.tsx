@@ -37,7 +37,7 @@ export default function Footer() {
                   href="/process"
                   className="hover:text-foreground transition-colors"
                 >
-                  Process / How We Work
+                  What We Do
                 </Link>
               </li>
               <li>
