@@ -27,8 +27,7 @@ export default function ProcessPage() {
     {
       title: "Sample development",
       desc: "We knit, link, finish, and deliver. Revision rounds until fit, feel, and finish are exactly right. No locking in until you're satisfied.",
-      timeline: "2–3 WEEKS",
-      note: "10 days",
+      timeline: "10 DAYS",
     },
     {
       title: "Lock the order",
