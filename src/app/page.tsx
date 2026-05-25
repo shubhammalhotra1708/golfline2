@@ -25,7 +25,7 @@ function Hero() {
         </p>
         <div className="mt-10 animate-fade-in-up animation-delay-400">
           <Link
-            href="/about"
+            href="/process"
             className="inline-block border border-white text-white px-8 py-3.5 text-sm tracking-[0.15em] uppercase hover:bg-white hover:text-accent transition-all duration-300"
           >
             View More
@@ -110,7 +110,7 @@ function Process() {
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src="/images/products/yarn-neutral.jpeg"
-                alt="Premium yarn spools"
+                alt="Premium yarn spools at Golfline knitwear manufacturing facility, Ludhiana"
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -172,7 +172,7 @@ function ProductRange() {
                 <div className="relative aspect-[4/3] overflow-hidden border border-border mb-3">
                   <Image
                     src={cat.image}
-                    alt={cat.name}
+                    alt={`${cat.name} — manufactured by Golfline, Ludhiana`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(min-width: 640px) 33vw, 50vw"

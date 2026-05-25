@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import "./globals.css";
 
 const inter = Inter({
@@ -43,35 +44,105 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Golfline",
-  url: "https://golfline.in",
-  description:
-    "Premium flat-knit knitwear manufacturer with 35+ years of expertise. Full-cycle manufacturing from sampling to dispatch.",
-  foundingDate: "1990",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Ludhiana",
-    addressRegion: "Punjab",
-    addressCountry: "IN",
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "Manufacturer"],
+    "@id": "https://golfline.in/#business",
+    name: "Golfline",
+    alternateName: "Golfline Knitwear",
+    url: "https://golfline.in",
+    description:
+      "Leading flat-knit knitwear manufacturer in Ludhiana, Punjab, India. 35+ years of expertise in premium sweater and pullover manufacturing. Full-cycle production — design, sampling, knitting, finishing, and dispatch — all under one roof with zero subcontracting.",
+    foundingDate: "1990",
+    image: "https://golfline.in/images/hero/yarn-spools.jpeg",
     telephone: "+91-9872858280",
     email: "team@golfline.in",
-    contactType: "sales",
-    availableLanguage: ["English", "Hindi"],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Ludhiana",
+      addressRegion: "Punjab",
+      postalCode: "141001",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 30.9,
+      longitude: 75.85,
+    },
+    areaServed: [
+      { "@type": "Country", name: "India" },
+      { "@type": "State", name: "Punjab" },
+      { "@type": "City", name: "Ludhiana" },
+      { "@type": "Place", name: "International" },
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91-9872858280",
+      email: "team@golfline.in",
+      contactType: "sales",
+      availableLanguage: ["English", "Hindi", "Punjabi"],
+    },
+    knowsAbout: [
+      "Flat-knit knitwear manufacturing",
+      "Sweater manufacturing",
+      "Pullover manufacturing",
+      "Jacquard knit manufacturing",
+      "Cable knit sweaters",
+      "Rib knit garments",
+      "Private label knitwear",
+      "B2B knitwear manufacturing",
+      "Lambswool knitwear",
+      "Cotton knitwear",
+      "Mohair blend knitwear",
+      "Acrylic knitwear",
+      "Stoll flat-knit machines",
+      "Shima Seiki flat-knit machines",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Knitwear Manufacturing Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Private Label Knitwear Manufacturing",
+            description:
+              "Full-cycle private label sweater and pullover manufacturing with 10-day sample development.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Knitwear Design & Development",
+            description:
+              "From tech pack to finished garment — design interpretation, sampling, and prototyping for flat-knit knitwear.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Knitwear Sampling & Prototyping",
+            description:
+              "10-day flat-knit sample development with revision rounds until approved. Production-ready samples.",
+          },
+        },
+      ],
+    },
+    sameAs: [],
   },
-  knowsAbout: [
-    "Flat-knit knitwear manufacturing",
-    "Cashmere knitwear",
-    "Merino wool sweaters",
-    "Private label knitwear",
-    "Sweater manufacturing",
-  ],
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://golfline.in/#website",
+    url: "https://golfline.in",
+    name: "GOLFLINE",
+    publisher: { "@id": "https://golfline.in/#business" },
+  },
+];
 
 export default function RootLayout({
   children,
@@ -91,6 +162,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );
