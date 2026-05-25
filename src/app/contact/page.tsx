@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import BrandBar from "@/components/BrandBar";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -19,8 +20,8 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      {/* Hero + Brand Bar = full viewport */}
+      <section className="relative min-h-screen flex flex-col overflow-hidden">
         <Image
           src="/images/products/yarn-knit-bw.jpeg"
           alt=""
@@ -30,23 +31,28 @@ export default function ContactPage() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-accent/90" />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8">
-          <p className="text-xs tracking-[0.2em] uppercase text-white/50 mb-4 animate-fade-in-up">
-            Contact
-          </p>
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-white animate-fade-in-up animation-delay-100">
-            Ready to Start Your Next Collection?
-          </h1>
-          <p className="mt-8 text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl animate-fade-in-up animation-delay-200">
-            Share your concept or tech pack with our development team.
-            We&apos;ll respond with a formal feasibility study and costing -
-            fast.
-          </p>
-          <p className="mt-4 text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl animate-fade-in-up animation-delay-300">
-            Whether you&apos;re a growing D2C brand seeking your first
-            manufacturing partner or an established label looking for a more
-            reliable alternative - we&apos;re ready to talk.
-          </p>
+        <div className="relative z-10 flex-1 flex items-center">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8 pt-20">
+            <p className="text-xs tracking-[0.2em] uppercase text-white/50 mb-4 animate-fade-in-up">
+              Contact
+            </p>
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-white animate-fade-in-up animation-delay-100">
+              Ready to Start Your Next Collection?
+            </h1>
+            <p className="mt-8 text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl animate-fade-in-up animation-delay-200">
+              Share your concept or tech pack with our development team.
+              We&apos;ll respond with a formal feasibility study and costing -
+              fast.
+            </p>
+            <p className="mt-4 text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl animate-fade-in-up animation-delay-300">
+              Whether you&apos;re a growing D2C brand seeking your first
+              manufacturing partner or an established label looking for a more
+              reliable alternative - we&apos;re ready to talk.
+            </p>
+          </div>
+        </div>
+        <div className="relative z-10 mt-auto">
+          <BrandBar />
         </div>
       </section>
 
@@ -91,6 +97,23 @@ export default function ContactPage() {
               </div>
             </RevealOnScroll>
           </div>
+
+          {/* WhatsApp Button */}
+          <RevealOnScroll delay={300}>
+            <div className="mt-12">
+              <a
+                href="https://wa.me/919872858280?text=Hi%20Golfline%2C%20I%27d%20like%20to%20discuss%20a%20project."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-[#25D366] text-white px-6 py-3.5 text-sm font-medium tracking-wide hover:bg-[#1da851] transition-colors duration-300"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Chat on WhatsApp
+              </a>
+            </div>
+          </RevealOnScroll>
         </div>
       </section>
     </>

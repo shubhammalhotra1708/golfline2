@@ -4,24 +4,24 @@ import { useState } from "react";
 
 const items = [
   {
-    title: "35+ Years of Expertise",
-    desc: "Three decades of hands-on flat-knit manufacturing have given us deep institutional knowledge across fibres, constructions, and finishing techniques. Trusted by brands across domestic and international markets, season after season — our experience translates directly into fewer revisions, faster sampling, and consistent production quality.",
+    title: "35 years of flat-knit expertise",
+    desc: "Three decades focused on one product category. We know what breaks, what scales and what doesn’t.",
   },
   {
-    title: "Uncompromising Quality",
-    desc: "What leaves our facility matches exactly what was approved at sampling. No exceptions. Every garment passes through multi-stage in-line quality checks — from yarn inspection to final pressing — ensuring zero surprises when your shipment arrives.",
+    title: "Uncompromising quality",
+    desc: "What gets approved at sampling is exactly what ships. Multi-stage in-line checks from yarn inspection to final pressing. Zero surprises.",
   },
   {
-    title: "Fast Turnaround",
-    desc: "Fully in-house manufacturing — knitting, linking, washing, finishing, pressing — enables quick movement from sampling to shipment without the delays of outsourcing. We keep your timelines tight so you can hit your launch windows with confidence.",
+    title: "Fast turnaround",
+    desc: "Fully in-house knitting, linking, washing, finishing, and pressing means no outsourcing delays. Your timelines stay tight, your launch windows stay on track.",
   },
   {
-    title: "Cutting-edge Technology",
-    desc: "State-of-the-art Stoll and Shima Seiki flat-knit machinery combining industrial precision with artisanal craftsmanship. Our equipment handles everything from fine-gauge cashmere to heavy cable-knit constructions with equal finesse.",
+    title: "Stoll & Shima Seiki machines",
+    desc: "German and Japanese flat-knit machinery used by premium manufacturers worldwide. Intricate jacquards, all knit structures, every gauge, executed with precision.",
   },
   {
-    title: "No Subcontracting",
-    desc: "One team. One accountability chain. Complete ownership from enquiry to final delivery. Every process happens under our roof, which means one point of contact, full traceability, and no quality dilution from third-party handoffs.",
+    title: "Zero subcontracting",
+    desc: "One team, one accountability chain. Every process under our roof means one point of contact, full traceability and no quality dilution from third-party handoffs.",
   },
 ];
 

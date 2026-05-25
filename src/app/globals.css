@@ -8,7 +8,7 @@
   --color-surface: #f7f7f5;
   --color-accent: #1a237e;
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
+  --font-serif: var(--font-oswald);
 }
 
 body {
@@ -70,6 +70,15 @@ html {
   animation-play-state: paused;
 }
 
+/* Our Work carousel — slower scroll */
+.animate-scroll-slow {
+  animation: scroll 60s linear infinite;
+}
+
+.animate-scroll-slow:hover {
+  animation-play-state: paused;
+}
+
 /* Process mobile timeline */
 .flow-mobile-spine {
   position: relative;
@@ -94,6 +103,11 @@ html {
   height: 9px;
   background: var(--color-foreground);
   border-radius: 50%;
+}
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
 @media (scripting: none) {

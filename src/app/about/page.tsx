@@ -19,39 +19,40 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-surface">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <p className="text-xs tracking-[0.2em] uppercase text-muted mb-4 animate-fade-in-up">
-            About Us
-          </p>
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight animate-fade-in-up animation-delay-100">
-            35+ Years of Knitwear Excellence
-          </h1>
-        </div>
-      </section>
-
-      {/* Content */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <RevealOnScroll>
-            <div className="space-y-6 text-muted text-base sm:text-lg leading-relaxed">
-              <p>
-                Golfline is a vertically integrated knitwear manufacturing unit
-                based in Ludhiana, Punjab. For over 35 years, we have built a
-                reputation for producing precision-crafted sweaters and
-                pullovers that meet the exacting standards of international
-                fashion brands and discerning domestic buyers.
-              </p>
-              <p>
-                Our facility combines traditional craftsmanship with modern
-                production capabilities, enabling us to deliver consistent
-                quality at scale — from development samples to full production
-                runs.
-              </p>
+      {/* Hero + Brand Bar = full viewport */}
+      <section className="min-h-screen flex flex-col bg-surface pt-20">
+        <div className="flex-1 flex items-center">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+              <div>
+                <p className="text-xs tracking-[0.2em] uppercase text-muted mb-4 animate-fade-in-up">
+                  About Us
+                </p>
+                <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight animate-fade-in-up animation-delay-100">
+                  35+ Years of Knitwear Excellence
+                </h1>
+              </div>
+              <div className="flex flex-col justify-end">
+                <div className="space-y-6 text-muted text-base sm:text-lg leading-relaxed animate-fade-in-up animation-delay-200">
+                  <p>
+                    Golfline is a vertically integrated knitwear manufacturing unit
+                    based in Ludhiana, Punjab. For over 35 years, we have built a
+                    reputation for producing precision-crafted sweaters and
+                    pullovers that meet the exacting standards of international
+                    fashion brands and discerning domestic buyers.
+                  </p>
+                  <p>
+                    Our facility combines traditional craftsmanship with modern
+                    production capabilities, enabling us to deliver consistent
+                    quality at scale — from development samples to full production
+                    runs.
+                  </p>
+                </div>
+              </div>
             </div>
-          </RevealOnScroll>
+          </div>
         </div>
+        <BrandBar />
       </section>
 
       {/* Vision & Mission */}
@@ -114,8 +115,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Brand Bar */}
-      <BrandBar />
     </>
   );
 }

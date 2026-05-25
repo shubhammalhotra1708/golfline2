@@ -3,24 +3,17 @@ import Image from "next/image";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import BrandBar from "@/components/BrandBar";
 import ExpertiseAccordion from "@/components/ExpertiseAccordion";
+import HeroBackground from "@/components/HeroBackground";
+import WorkCarousel from "@/components/WorkCarousel";
 
 /* ─── Hero ─── */
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      <Image
-        src="/images/hero/yarn-spools.jpeg"
-        alt=""
-        fill
-        className="object-cover"
-        priority
-        sizes="100vw"
-        placeholder="blur"
-        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAKAAcDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgUH/8QAIhAAAQMDBAMBAAAAAAAAAAAAAQIDBAAFEQYSITETQVFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/AE9s1Bpxlhq5wYrr84IC3UOpCW0eySfZNS7prO+3R1TjdwlMJP1p5SUj+ClVRLf/9k="
-      />
-      <div className="absolute inset-0 bg-accent/85" />
+      {/* Change variant to "blue", "dark", or "plain" to compare */}
+      <HeroBackground variant="dark" />
       <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8 pt-20 lg:max-w-[85%] lg:mr-auto lg:ml-[8%]">
-        <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl leading-[1.1] tracking-tight text-white animate-fade-in-up">
+        <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl leading-[1.1] tracking-tight text-white uppercase font-bold animate-fade-in-up">
           STITCHING DREAMS,
           <br />
           ONE KNIT AT A TIME
@@ -51,8 +44,11 @@ function Expertise() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
           <div className="lg:col-span-2">
             <RevealOnScroll>
-              <h2 className="font-serif text-3xl lg:text-4xl leading-tight">
-                Our expertise inspires creative solutions.
+              <p className="text-xs tracking-[0.2em] uppercase text-muted mb-4">
+                Why Golfline?
+              </p>
+              <h2 className="font-serif text-3xl lg:text-4xl leading-tight uppercase font-bold">
+                Built on Trust, Delivered with Precision
               </h2>
             </RevealOnScroll>
           </div>
@@ -69,6 +65,7 @@ function Expertise() {
 function TrustMetrics() {
   const metrics = [
     { value: "35+", label: "Years of Expertise" },
+    { value: "10", label: "Days Sample Development" },
     { value: "100%", label: "In-line Quality Control" },
     { value: "5", label: "Full-cycle Production Phases" },
   ];
@@ -76,7 +73,7 @@ function TrustMetrics() {
   return (
     <section className="py-20 lg:py-28 bg-surface">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {metrics.map((m, i) => (
             <RevealOnScroll key={i} delay={i * 100}>
               <div className="text-center">
@@ -98,11 +95,11 @@ function TrustMetrics() {
 /* ─── Process / How We Work ─── */
 function Process() {
   const steps = [
-    { num: "01", title: "Enquiry & Brief" },
-    { num: "02", title: "Sample Development" },
-    { num: "03", title: "Order Confirmation" },
-    { num: "04", title: "Production & Quality Control" },
-    { num: "05", title: "Packing & Dispatch" },
+    "Enquiry & Brief",
+    "Sample Development",
+    "Order Confirmation",
+    "Production & Quality Control",
+    "Packing & Dispatch",
   ];
 
   return (
@@ -132,26 +129,15 @@ function Process() {
             <div className="space-y-0">
               {steps.map((step, i) => (
                 <RevealOnScroll key={i} delay={i * 80}>
-                  <div className="flex items-baseline gap-4 py-4 border-b border-border">
-                    <span className="font-serif text-lg text-muted/30">
-                      {step.num}
-                    </span>
+                  <div className="py-4 border-b border-border">
                     <h3 className="text-base font-medium tracking-wide">
-                      {step.title}
+                      {step}
                     </h3>
                   </div>
                 </RevealOnScroll>
               ))}
             </div>
 
-            <RevealOnScroll className="mt-10">
-              <Link
-                href="/process"
-                className="inline-block border border-foreground px-8 py-3.5 text-sm tracking-[0.15em] uppercase hover:bg-foreground hover:text-white transition-all duration-300"
-              >
-                View More
-              </Link>
-            </RevealOnScroll>
           </div>
         </div>
       </div>
@@ -162,16 +148,16 @@ function Process() {
 /* ─── Product Range ─── */
 function ProductRange() {
   const categories = [
-    { name: "Flat Knit Collar", image: "/images/products/yarn-knit-bw.jpeg" },
-    { name: "Sweaters & Pullovers", image: "/images/products/yarn-pink-green.jpeg" },
-    { name: "Jacquard Knits", image: "/images/products/sewing-machine.jpeg" },
-    { name: "Rib Knits", image: "/images/products/yarn-neutral.jpeg" },
-    { name: "Cotton Knits", image: null },
-    { name: "Cable Knits", image: null },
+    { name: "Flat Knit Collar", image: "/images/products/range-flat-knit-collar.webp" },
+    { name: "Sweaters & Pullovers", image: "/images/products/range-sweaters.jpg" },
+    { name: "Jacquard Knits", image: "/images/products/range-jacquard.webp" },
+    { name: "Rib Knits", image: "/images/products/range-rib.jpg" },
+    { name: "Cotton Knits", image: "/images/products/range-cotton.webp" },
+    { name: "Cable Knits", image: "/images/products/range-cable.webp" },
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-surface">
+    <section className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <RevealOnScroll>
           <h2 className="font-serif text-3xl lg:text-4xl leading-tight mb-14">
@@ -183,22 +169,14 @@ function ProductRange() {
           {categories.map((cat, i) => (
             <RevealOnScroll key={i} delay={i * 80}>
               <div className="group">
-                <div className="relative aspect-[4/3] overflow-hidden border border-border bg-border/30 mb-3">
-                  {cat.image ? (
-                    <Image
-                      src={cat.image}
-                      alt={cat.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(min-width: 640px) 33vw, 50vw"
-                    />
-                  ) : (
-                    <div className="flex items-center justify-center h-full">
-                      <p className="text-xs text-muted/50 tracking-wide">
-                        Photo
-                      </p>
-                    </div>
-                  )}
+                <div className="relative aspect-[4/3] overflow-hidden border border-border mb-3">
+                  <Image
+                    src={cat.image}
+                    alt={cat.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(min-width: 640px) 33vw, 50vw"
+                  />
                 </div>
                 <p className="text-sm font-medium tracking-wide">{cat.name}</p>
               </div>
@@ -216,7 +194,7 @@ function Differentiator() {
     <section className="py-20 lg:py-28 bg-accent text-white">
       <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
         <RevealOnScroll>
-          <h2 className="font-serif text-3xl lg:text-5xl leading-tight">
+          <h2 className="font-serif text-3xl lg:text-5xl leading-tight uppercase font-bold">
             Built to Eliminate Supply Chain Headaches.
           </h2>
           <p className="mt-8 text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
@@ -225,6 +203,24 @@ function Differentiator() {
             every time.
           </p>
         </RevealOnScroll>
+      </div>
+    </section>
+  );
+}
+
+/* ─── Our Work (carousel) ─── */
+function OurWork() {
+  return (
+    <section className="py-20 lg:py-28 bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-12">
+        <RevealOnScroll>
+          <h2 className="font-serif text-3xl lg:text-4xl leading-tight">
+            Our Work
+          </h2>
+        </RevealOnScroll>
+      </div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <WorkCarousel />
       </div>
     </section>
   );
@@ -295,10 +291,9 @@ export default function Home() {
       <BrandBar />
       <Expertise />
       <TrustMetrics />
-      <Process />
+      {/* <Process /> */}
       <ProductRange />
       <Differentiator />
-      <ContactSection />
     </>
   );
 }

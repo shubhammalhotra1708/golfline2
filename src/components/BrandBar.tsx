@@ -12,6 +12,9 @@ const brands = [
   { name: "EVEMEN", src: "/images/brands/evemen.png" },
   { name: "Farak", src: "/images/brands/black-farak.avif" },
   { name: "Code Brown", src: "/images/brands/code-brown.png" },
+  { name: "Sagacity", src: "/images/brands/sagacity.avif", dark: true },
+  { name: "ShopFootball", src: "/images/brands/shopfootball.avif" },
+  { name: "Struct", src: "/images/brands/struct.avif" },
 ];
 
 export default function BrandBar() {
@@ -21,12 +24,12 @@ export default function BrandBar() {
     <section className="py-10 border-b border-border bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <RevealOnScroll>
-          <p className="text-center font-serif text-2xl lg:text-3xl tracking-tight mb-2">
+          <p className="text-center font-serif text-2xl lg:text-3xl tracking-tight mb-8">
             Your Trusted B2B Partner
           </p>
-          <p className="text-center text-xs tracking-[0.2em] uppercase text-muted mb-8">
+          {/* <p className="text-center text-xs tracking-[0.2em] uppercase text-muted mb-8">
             Trusted by leading brands across India and international markets
-          </p>
+          </p> */}
         </RevealOnScroll>
       </div>
       <div className="overflow-hidden">
@@ -37,7 +40,7 @@ export default function BrandBar() {
               className="group mx-8 lg:mx-12 shrink-0 flex flex-col items-center gap-2"
               title={brand.name}
             >
-              <div className="h-8 w-24 lg:h-10 lg:w-32 relative opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+              <div className={`h-8 w-24 lg:h-10 lg:w-32 relative opacity-70 group-hover:opacity-100 transition-opacity duration-300 ${brand.dark ? "bg-foreground px-2 rounded-sm" : ""}`}>
                 <Image
                   src={brand.src}
                   alt={brand.name}

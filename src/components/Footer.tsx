@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <Link
               href="/"
-              className="font-serif text-xl tracking-[0.15em] font-semibold"
+              className="font-serif text-xl tracking-[0.25em] font-bold uppercase"
             >
               GOLFLINE
             </Link>
