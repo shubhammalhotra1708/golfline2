@@ -162,9 +162,6 @@ export default function ProcessPage() {
                     <span className="text-sm font-semibold tracking-[0.1em] text-accent">
                       {step.timeline}
                     </span>
-                    {step.note && (
-                      <p className="text-xs text-accent/60 mt-0.5">{step.note}</p>
-                    )}
                   </div>
                 </div>
               </RevealOnScroll>
