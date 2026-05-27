@@ -21,19 +21,19 @@ const oswald = Oswald({
 export const metadata: Metadata = {
   metadataBase: new URL("https://golfline.in"),
   title: {
-    default: "GOLFLINE | Premium Flat-Knit Knitwear Manufacturing",
-    template: "%s | GOLFLINE",
+    default: "GOLFLINE | Flat-Knit Knitwear Manufacturer, Ludhiana",
+    template: "%s | GOLFLINE, Ludhiana",
   },
   description:
-    "With 35+ years of expertise, Golfline is your full-cycle partner for premium flat-knit manufacturing. We transform your design vision into market-ready reality with precision, consistency, and speed.",
+    "Flat-knit knitwear manufacturer in Ludhiana, Punjab. Sweaters, pullovers, jacquard knits. Stoll & Shima Seiki machines, 10-day sampling, zero subcontracting. Full-cycle production since 1990.",
   authors: [{ name: "Golfline" }],
   openGraph: {
     type: "website",
     locale: "en_IN",
     siteName: "GOLFLINE",
-    title: "GOLFLINE | Premium Flat-Knit Knitwear Manufacturing",
+    title: "GOLFLINE | Flat-Knit Knitwear Manufacturer, Ludhiana",
     description:
-      "With 35+ years of expertise, Golfline is your full-cycle partner for premium flat-knit manufacturing.",
+      "Flat-knit knitwear manufacturer in Ludhiana, Punjab. Sweaters, pullovers, jacquard knits since 1990.",
   },
   robots: {
     index: true,

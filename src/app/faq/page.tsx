@@ -3,13 +3,13 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import BrandBar from "@/components/BrandBar";
 
 export const metadata: Metadata = {
-  title: "FAQ",
+  title: "FAQ | Knitwear Manufacturing",
   description:
-    "Frequently asked questions about Golfline's knitwear manufacturing — MOQs, timelines, tech packs, pricing, and garment replication.",
+    "MOQs, sampling timelines, pricing, tech pack requirements, garment replication. Frequently asked questions about working with Golfline knitwear manufacturing.",
   openGraph: {
-    title: "FAQ | GOLFLINE",
+    title: "FAQ | Knitwear Manufacturing",
     description:
-      "Common questions about our flat-knit knitwear manufacturing process.",
+      "MOQs, timelines, pricing and more. Knitwear manufacturing FAQ.",
   },
   alternates: {
     canonical: "/faq",

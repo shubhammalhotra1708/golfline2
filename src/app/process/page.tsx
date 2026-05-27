@@ -4,13 +4,13 @@ import BrandBar from "@/components/BrandBar";
 import WorkCarousel from "@/components/WorkCarousel";
 
 export const metadata: Metadata = {
-  title: "What We Do",
+  title: "How We Work | Flat-Knit Manufacturing Process",
   description:
-    "End-to-end knitwear manufacturing under one roof — from enquiry to dispatch. Premium yarn expertise, design & development, private label, sampling, and quality assurance.",
+    "Flat-knit manufacturing process: 48-hour quoting, 10-day sampling, 4-6 week production. Lambswool, cotton, mohair, acrylic. Private label sweater and pullover manufacturing in Ludhiana.",
   openGraph: {
-    title: "What We Do | GOLFLINE",
+    title: "How We Work | Flat-Knit Manufacturing Process",
     description:
-      "End-to-end knitwear manufacturing under one roof with premium yarn expertise.",
+      "End-to-end flat-knit knitwear manufacturing process. 48-hour quoting to on-schedule dispatch.",
   },
   alternates: {
     canonical: "/process",

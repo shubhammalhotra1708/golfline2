@@ -4,13 +4,13 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import BrandBar from "@/components/BrandBar";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact | Golfline Knitwear, Ludhiana",
   description:
-    "Ready to start your next collection? Share your concept or tech pack with Golfline.",
+    "Contact Golfline knitwear manufacturing, Ludhiana, Punjab. Share your tech pack or concept. WhatsApp, email, or call. Private label and B2B enquiries.",
   openGraph: {
-    title: "Contact | GOLFLINE",
+    title: "Contact | Golfline Knitwear, Ludhiana",
     description:
-      "Share your concept or tech pack with our development team.",
+      "Get in touch with Golfline knitwear manufacturing, Ludhiana. WhatsApp, email, or call.",
   },
   alternates: {
     canonical: "/contact",

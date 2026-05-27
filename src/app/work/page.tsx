@@ -3,13 +3,13 @@ import Image from "next/image";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
 export const metadata: Metadata = {
-  title: "Our Work",
+  title: "Our Work | Knitwear Portfolio",
   description:
-    "Browse knitwear manufactured by Golfline — flat-knit sweaters, pullovers, jacquard knits, cable knits, and more for leading brands.",
+    "Flat-knit knitwear manufactured by Golfline, Ludhiana. Sweaters, pullovers, jacquard knits, cable knits, rib knits for brands across India and internationally.",
   openGraph: {
-    title: "Our Work | GOLFLINE",
+    title: "Our Work | Knitwear Portfolio",
     description:
-      "Premium flat-knit knitwear portfolio. Sweaters, pullovers, and jacquard knits manufactured in Ludhiana.",
+      "Flat-knit knitwear portfolio. Sweaters, pullovers, and jacquard knits manufactured in Ludhiana.",
   },
   alternates: {
     canonical: "/work",

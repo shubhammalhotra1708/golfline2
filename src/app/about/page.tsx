@@ -3,13 +3,13 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 import BrandBar from "@/components/BrandBar";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Golfline | Knitwear Manufacturer Since 1990",
   description:
-    "Golfline is a vertically integrated knitwear manufacturing unit based in Ludhiana, Punjab. For over 35 years, we have built a reputation for producing precision-crafted sweaters and pullovers.",
+    "Vertically integrated knitwear manufacturer in Ludhiana, Punjab. In-house knitting, linking, washing, finishing, pressing. Trusted by domestic and international brands since 1990.",
   openGraph: {
-    title: "About Us | GOLFLINE",
+    title: "About Golfline | Knitwear Manufacturer Since 1990",
     description:
-      "35+ years of knitwear excellence. Vertically integrated manufacturing from Ludhiana, Punjab.",
+      "Vertically integrated knitwear manufacturing from Ludhiana, Punjab since 1990.",
   },
   alternates: {
     canonical: "/about",
