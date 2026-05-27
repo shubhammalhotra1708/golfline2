@@ -19,9 +19,9 @@ function Hero() {
           ONE KNIT AT A TIME
         </h1>
         <p className="mt-8 text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl animate-fade-in-up animation-delay-200">
-          With 35+ years of expertise, Golfline is your full-cycle partner for
-          premium flat-knit manufacturing. We transform your design vision into
-          market-ready reality with precision, consistency, and speed.
+          Golfline is your full-cycle partner for premium flat-knit
+          manufacturing in Ludhiana, Punjab. We transform your design vision
+          into market-ready knitwear with precision, consistency, and speed.
         </p>
         <div className="mt-10 animate-fade-in-up animation-delay-400">
           <Link

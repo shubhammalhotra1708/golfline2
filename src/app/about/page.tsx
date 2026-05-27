@@ -29,7 +29,7 @@ export default function AboutPage() {
                   About Us
                 </p>
                 <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight animate-fade-in-up animation-delay-100">
-                  35+ Years of Knitwear Excellence
+                  Three Decades of Knitwear Excellence
                 </h1>
               </div>
               <div className="flex flex-col justify-end">

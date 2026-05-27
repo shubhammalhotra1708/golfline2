@@ -39,8 +39,10 @@ export default function Header() {
 
         <ul className="hidden md:flex items-center gap-8 text-sm tracking-wide">
           {[
-            { href: "/about", label: "About Us" },
             { href: "/process", label: "What We Do" },
+            { href: "/work", label: "Our Work" },
+            { href: "/about", label: "About Us" },
+            { href: "/faq", label: "FAQ" },
             { href: "/contact", label: "Contact" },
           ].map((link) => (
             <li key={link.href}>
@@ -106,6 +108,8 @@ export default function Header() {
           {[
             { href: "/about", label: "About Us" },
             { href: "/process", label: "What We Do" },
+            { href: "/work", label: "Our Work" },
+            { href: "/faq", label: "FAQ" },
             { href: "/contact", label: "Contact" },
           ].map((link) => (
             <li key={link.href}>

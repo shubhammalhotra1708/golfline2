@@ -42,6 +42,22 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/work"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Our Work
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/faq"
+                  className="hover:text-foreground transition-colors"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/contact"
                   className="hover:text-foreground transition-colors"
                 >
