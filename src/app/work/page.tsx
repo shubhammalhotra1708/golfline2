@@ -56,6 +56,9 @@ export default function WorkPage() {
           <h1 className="font-serif text-3xl lg:text-4xl leading-tight">
             Gallery
           </h1>
+          <p className="mt-3 text-sm text-muted">
+           Knitwear produced at our Ludhiana facility.
+          </p>
         </div>
 
         <div className="columns-2 md:columns-3 lg:columns-4 gap-4">

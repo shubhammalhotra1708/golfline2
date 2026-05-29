@@ -50,7 +50,8 @@ const jsonLd = [
     "@type": ["LocalBusiness", "Manufacturer"],
     "@id": "https://golfline.in/#business",
     name: "Golfline",
-    alternateName: "Golfline Knitwear",
+    alternateName: ["GL International", "Golfline Knitwear"],
+    legalName: "GL International",
     url: "https://golfline.in",
     description:
       "Leading flat-knit knitwear manufacturer in Ludhiana, Punjab, India. 35+ years of expertise in premium sweater and pullover manufacturing. Full-cycle production — design, sampling, knitting, finishing, and dispatch — all under one roof with zero subcontracting.",

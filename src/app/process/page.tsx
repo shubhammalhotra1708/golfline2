@@ -79,7 +79,7 @@ export default function ProcessPage() {
                 <ul className="mt-6 space-y-2 animate-fade-in-up animation-delay-300">
                   <li className="flex items-start gap-2 text-sm text-muted">
                     <span className="mt-1.5 w-1 h-1 bg-foreground shrink-0" />
-                    Full-cycle flat-knit manufacturing
+                    Full-cycle flat-knit knitwear manufacturing
                   </li>
                   <li className="flex items-start gap-2 text-sm text-muted">
                     <span className="mt-1.5 w-1 h-1 bg-foreground shrink-0" />
@@ -88,6 +88,10 @@ export default function ProcessPage() {
                   <li className="flex items-start gap-2 text-sm text-muted">
                     <span className="mt-1.5 w-1 h-1 bg-foreground shrink-0" />
                     In-house quality control at every stage
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-muted">
+                    <span className="mt-1.5 w-1 h-1 bg-foreground shrink-0" />
+                    Based in Ludhiana, serving brands across India
                   </li>
                 </ul>
               </div>

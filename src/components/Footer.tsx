@@ -14,7 +14,10 @@ export default function Footer() {
               GOLFLINE
             </Link>
             <p className="mt-4 text-sm text-muted leading-relaxed max-w-xs">
-              Premium flat-knit manufacturing with 35+ years of expertise.
+              Premium knitwear manufacturer based in Ludhiana, Punjab.
+            </p>
+            <p className="mt-1 text-xs text-muted/60">
+              A unit of GL International
             </p>
           </div>
 
