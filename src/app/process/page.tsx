@@ -17,6 +17,15 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://golfline.in" },
+    { "@type": "ListItem", position: 2, name: "What We Do", item: "https://golfline.in/process" },
+  ],
+};
+
 export default function ProcessPage() {
   const steps = [
     {
@@ -57,6 +66,7 @@ export default function ProcessPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero + Brand Bar = full viewport */}
       <section className="min-h-screen flex flex-col bg-surface pt-20">
         <div className="flex-1 flex items-center">
@@ -83,7 +93,7 @@ export default function ProcessPage() {
                   </li>
                   <li className="flex items-start gap-2 text-sm text-muted">
                     <span className="mt-1.5 w-1 h-1 bg-foreground shrink-0" />
-                    35+ years of production expertise
+                    Stoll & Shima Seiki flat-knit machines
                   </li>
                   <li className="flex items-start gap-2 text-sm text-muted">
                     <span className="mt-1.5 w-1 h-1 bg-foreground shrink-0" />

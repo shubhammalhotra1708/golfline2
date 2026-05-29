@@ -34,6 +34,14 @@ export const metadata: Metadata = {
     title: "GOLFLINE | Flat-Knit Knitwear Manufacturer, Ludhiana",
     description:
       "Flat-knit knitwear manufacturer in Ludhiana, Punjab. Sweaters, pullovers, jacquard knits since 1990.",
+    images: [
+      {
+        url: "/images/hero/yarn-spools.jpeg",
+        width: 1282,
+        height: 1920,
+        alt: "Golfline knitwear manufacturing — premium yarn spools",
+      },
+    ],
   },
   robots: {
     index: true,

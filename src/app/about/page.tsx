@@ -16,9 +16,19 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://golfline.in" },
+    { "@type": "ListItem", position: 2, name: "About Us", item: "https://golfline.in/about" },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero + Brand Bar = full viewport */}
       <section className="min-h-screen flex flex-col bg-surface pt-20">
         <div className="flex-1 flex items-center">
@@ -35,11 +45,7 @@ export default function AboutPage() {
               <div className="flex flex-col justify-end">
                 <div className="space-y-6 text-muted text-base sm:text-lg leading-relaxed animate-fade-in-up animation-delay-200">
                   <p>
-                    Golfline is a vertically integrated knitwear manufacturing unit
-                    based in Ludhiana, Punjab. For over 35 years, we have built a
-                    reputation for producing precision-crafted sweaters and
-                    pullovers that meet the exacting standards of international
-                    fashion brands and discerning domestic buyers.
+                    Golfline is the best knitwear manufacturing unit in Ludhiana, Punjab, with complete in-house production capabilities. We specialise in crafting high-quality sweaters and pullovers with a strong focus on fit, finish, and consistency. From international fashion labels to domestic buyers, we work closely with every client to deliver products that meet their quality standards and design requirements.
                   </p>
                   <p>
                     Our facility combines traditional craftsmanship with modern
